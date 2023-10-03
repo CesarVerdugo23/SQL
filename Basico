@@ -1,3 +1,5 @@
+# Como crear Tablas de Cero
+
 CREATE TABLE "Comercio" (
 	"Id_Comercio"	INTEGER,
 	"Producto"	TEXT,
@@ -5,3 +7,19 @@ CREATE TABLE "Comercio" (
 	"Precio"	INTEGER,
 	PRIMARY KEY("Id_Comercio" AUTOINCREMENT)
 );
+
+CREATE TABLE "proveedores" (
+	"Id_proveedor"	INTEGER,
+	"Marca"	TEXT,
+	"Id_Comercio"	INTEGER,
+	"Motivo"	TEXT,
+	"Horario"	TEXT,
+	PRIMARY KEY("Id_proveedor" AUTOINCREMENT)
+);
+
+# Para seleccionar todo 
+SELECT * FROM "Comercio"
+
+# Para insertar datos
+INSERT INTO "Comercio" ("Producto", "Precio") 
+VALUES ("Celular", 8000)
