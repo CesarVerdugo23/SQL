@@ -1,0 +1,7 @@
+CREATE TABLE "Comercio" (
+	"Id_Comercio"	INTEGER,
+	"Producto"	TEXT,
+	"Inventario"	INTEGER,
+	"Precio"	INTEGER,
+	PRIMARY KEY("Id_Comercio" AUTOINCREMENT)
+);
