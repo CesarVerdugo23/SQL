@@ -23,3 +23,25 @@ SELECT * FROM "Comercio"
 # Para insertar datos
 INSERT INTO "Comercio" ("Producto", "Precio") 
 VALUES ("Celular", 8000)
+
+
+# Ordenar los distintos filtros
+SELECT * FROM Comercio
+ORDER BY "Precio"
+
+# La clausula --- WHERE --- uasada para trabajar con condiciones
+SELECT Producto FROM Comercio
+WHERE Id_Comercio = 3
+
+SELECT * FROM Comercio
+WHERE Producto = "Ventilador"
+
+SELECT * FROM Comercio
+WHERE Precio < 10000
+
+# La clausula --- UODATE --- uasada para actualizar registros
+UPDATE Comercio 
+SET "Inventario" = 40
+WHERE Id_Comercio = 6
+;
+SELECT * FROM Comercio
