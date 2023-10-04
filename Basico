@@ -39,9 +39,42 @@ WHERE Producto = "Ventilador"
 SELECT * FROM Comercio
 WHERE Precio < 10000
 
-# La clausula --- UODATE --- uasada para actualizar registros
+# La clausula --- UPDATE --- uasada para actualizar registros
 UPDATE Comercio 
 SET "Inventario" = 40
 WHERE Id_Comercio = 6
 ;
 SELECT * FROM Comercio
+
+
+# Condiciones ---- AND & OR ----
+SELECT * FROM Customers
+WHERE CustomerID >=50 AND CustomerID < 55
+
+SELECT * FROM Employees
+WHERE FirstName= "Nancy" OR FirstName = "Anne"
+
+SELECT * FROM Products
+WHERE (Price < 20 OR CategoryID = 6) AND  SupplierID = 7
+
+SELECT * FROM Customers
+WHERE NOT Country = "Germany" AND NOT Country = "Mexico"
+
+SELECT * FROM Products
+WHERE Price > 40 AND NOT CategoryID = 3
+ORDER BY ProductName
+
+SELECT * FROM Customers
+WHERE NOT Country = "Germany" 
+AND NOT Country = "Mexico"
+AND NOT City = "London"
+AND NOT City = "Buenos Aires"
+LIMIT 6
+
+SELECT * FROM Products
+WHERE NOT CategoryID = 6
+AND NOT SupplierID = 1
+And Price <= 30
+Limit 3
+
+
